@@ -15,3 +15,20 @@ C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PdfSharp.C
 C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.csproj.CopyComplete
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PDF Protect App.exe.config
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PDF Protect App.exe
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PDF Protect App.pdb
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PdfSharp.Charting.dll
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PdfSharp.dll
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PdfSharp.xml
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\PdfSharp.Charting.xml
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\de\PdfSharp.resources.dll
+C:\Git\PDF_Protect_App\PDF Protect App\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.csprojAssemblyReference.cache
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF_Protect_App.Form1.resources
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF_Protect_App.Properties.Resources.resources
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.csproj.GenerateResource.cache
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.csproj.CoreCompileInputs.cache
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.csproj.CopyComplete
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.exe
+C:\Git\PDF_Protect_App\PDF Protect App\obj\Debug\PDF Protect App.pdb
