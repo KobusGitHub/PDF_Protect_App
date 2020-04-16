@@ -1,0 +1,17 @@
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PDF Protect App.exe.config
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PDF Protect App.exe
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PDF Protect App.pdb
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.csprojAssemblyReference.cache
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF_Protect_App.Form1.resources
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF_Protect_App.Properties.Resources.resources
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.csproj.GenerateResource.cache
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.csproj.CoreCompileInputs.cache
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.exe
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.pdb
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PdfSharp.dll
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PdfSharp.xml
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Kobus\source\repos\PDF Protect App\PDF Protect App\obj\Debug\PDF Protect App.csproj.CopyComplete
