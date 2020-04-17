@@ -28,7 +28,7 @@ namespace PDF_Protect_App
 
         }
 
-      
+
         private void btnDestFolder_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
@@ -54,11 +54,19 @@ namespace PDF_Protect_App
             }
 
             var fileName = Path.GetFileName(this.txtFileSelected.Text);
-            var searchIdKey = txtId.Text;
+            var searchIdStartKey = txtIdStart.Text;
+            var searchIdEndKey = txtIdEnd.Text;
 
-            if (string.IsNullOrEmpty(searchIdKey))
+            if (string.IsNullOrEmpty(searchIdStartKey))
             {
-                MessageBox.Show("Invalid ID Key");
+                MessageBox.Show("Invalid ID start Key");
+                return;
+            }
+
+
+            if (string.IsNullOrEmpty(searchIdEndKey))
+            {
+                MessageBox.Show("Invalid ID end Key");
                 return;
             }
 
@@ -71,23 +79,26 @@ namespace PDF_Protect_App
             }
 
 
-            if(txtOwnerPassword.Text != txtOwnerPassword2.Text || string.IsNullOrEmpty(txtOwnerPassword.Text))
+            if (txtOwnerPassword.Text != txtOwnerPassword2.Text || string.IsNullOrEmpty(txtOwnerPassword.Text))
             {
                 MessageBox.Show("Password Invalid");
                 return;
             }
 
-            // Delete all files in destination
-            DirectoryInfo di = new DirectoryInfo(destPath);
-            foreach (FileInfo file in di.GetFiles())
+            if (ckClear.Checked)
             {
-                file.Delete();
+                // Delete all files in destination
+                DirectoryInfo di = new DirectoryInfo(destPath);
+                foreach (FileInfo file in di.GetFiles())
+                {
+                    file.Delete();
+                }
             }
 
-            
+
             try
             {
-                var result = this.SplitProtect(filePath, destPath, fileName, searchIdKey, searchNameKey, txtOwnerPassword.Text);
+                var result = this.SplitProtect(filePath, destPath, fileName, searchIdStartKey, searchIdEndKey, searchNameKey, txtNameSuffix.Text, txtOwnerPassword.Text);
                 if (result == true)
                 {
                     MessageBox.Show("Files created successfully");
@@ -102,14 +113,14 @@ namespace PDF_Protect_App
                 }
 
                 MessageBox.Show("Files created failed");
-            } 
+            }
 
-            
+
 
         }
 
 
-        private bool SplitProtect(string path, string destPath, string filename, string searchIdKey, string searchNameKey, string ownerPwd)
+        private bool SplitProtect(string path, string destPath, string filename, string searchIdStartKey, string searchIdEndKey, string searchNameKey, string fileNameSuffix, string ownerPwd)
         {
 
             var identifiers = new List<Identifier>();
@@ -141,7 +152,7 @@ namespace PDF_Protect_App
                 // Add the page and save it
                 var page = inputDocument.Pages[idx];
 
-                var identifier = getIdentifier(page, searchIdKey, searchNameKey);
+                var identifier = getIdentifier(page, searchIdStartKey, searchIdEndKey, searchNameKey);
                 if (identifier == null)
                 {
                     MessageBox.Show("Search Values Invalid");
@@ -153,7 +164,7 @@ namespace PDF_Protect_App
                 outputDocument.AddPage(page);
 
                 // var saveFileName = String.Format("{0}_{1}.pdf", name, idx + 1);
-                var saveFileName = String.Format("{0}.pdf", identifier.PersonName);
+                var saveFileName = String.Format("{0}{1}.pdf", identifier.PersonName, fileNameSuffix);
 
                 outputDocument.Save(destPath + "\\" + saveFileName);
             }
@@ -167,8 +178,8 @@ namespace PDF_Protect_App
                 // Set Password
                 foreach (var identifier in identifiers)
                 {
-                    w.WriteLine(identifier.PersonName + ".pdf,'" + identifier.IdNumber + "'");
-                    ProtectFile(destPath + "\\" + identifier.PersonName + ".pdf", ownerPwd, identifier.IdNumber);
+                    w.WriteLine(identifier.PersonName + fileNameSuffix + ".pdf,'" + identifier.IdNumber + "'");
+                    ProtectFile(destPath + "\\" + identifier.PersonName + fileNameSuffix + ".pdf", ownerPwd, identifier.IdNumber);
                 }
 
             }
@@ -176,7 +187,7 @@ namespace PDF_Protect_App
             return true;
         }
 
-        private Identifier getIdentifier(PdfPage page, string idKey, string nameKey)
+        private Identifier getIdentifier(PdfPage page, string idStartKey, string idEndKey, string nameKey)
         {
             Identifier identifier = new Identifier();
 
@@ -185,21 +196,16 @@ namespace PDF_Protect_App
                 PdfDictionary.PdfStream stream = page.Contents.Elements.GetDictionary(index).Stream;
                 var outputText = new PDFTextExtractor().ExtractTextFromPDFBytes(stream.Value);
 
-                var searchIdIndex = outputText.IndexOf(idKey);
-                if (searchIdIndex > -1)
-                {
-                    var id = outputText.Substring(searchIdIndex + idKey.Length, 13);
-                    identifier.IdNumber = id;
-                    if (identifier.isLoaded)
-                    {
-                        return identifier;
-                    }
-                }
+
+
 
                 var searchNameIndex = outputText.IndexOf(nameKey);
                 if (searchNameIndex > -1)
                 {
-                    var attIndex = outputText.IndexOf("@");
+                    var restOfString = outputText.Substring(searchNameIndex);
+                    var attIndex = restOfString.IndexOf("@");
+                    attIndex = attIndex + searchNameIndex;
+
 
                     var startIndex = searchNameIndex + nameKey.Count();
                     var endIndex = attIndex - startIndex;
@@ -211,6 +217,34 @@ namespace PDF_Protect_App
                     }
 
                 }
+
+
+
+                var searchIdIndex = outputText.IndexOf(idStartKey);
+                if (searchIdIndex > -1)
+                {
+                    var endKeyIndex = outputText.IndexOf(idEndKey);
+
+                    if(searchNameIndex < endKeyIndex)
+                    {
+                        return null;
+                    }
+
+                    if (endKeyIndex > -1)
+                    {
+                        var startIndex = searchIdIndex + idStartKey.Length;
+                        var idLength = endKeyIndex - startIndex;
+
+                        var id = outputText.Substring(startIndex, idLength);
+                        identifier.IdNumber = id;
+                        if (identifier.isLoaded)
+                        {
+                            return identifier;
+                        }
+                    }
+                }
+
+              
 
             }
             return null;
@@ -248,7 +282,9 @@ namespace PDF_Protect_App
             //Process.Start(filenameDest);
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

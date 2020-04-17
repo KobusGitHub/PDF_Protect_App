@@ -15,8 +15,8 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_307002243116415BB2529EA2E6FDCC40"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_11639EB9D9BD41B0CB0F41C5031D8031"
+        "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -27,25 +27,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D338B82F6CA54E04FD3196B759846B1"
+        "MsmKey" = "8:_8F43EB217B5B3F7C85740F50B3744F56"
+        "OwnerKey" = "8:_11639EB9D9BD41B0CB0F41C5031D8031"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8F43EB217B5B3F7C85740F50B3744F56"
         "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D01331147F5A48B5E4999764E34BEBCA"
-        "OwnerKey" = "8:_7D338B82F6CA54E04FD3196B759846B1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D01331147F5A48B5E4999764E34BEBCA"
-        "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
+        "MsmKey" = "8:_D400EB1C85544E7E862ECF206E8C83C6"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_D6E0D0DEA7BA0E817ADAB68261589C96"
+        "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,19 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
+        "OwnerKey" = "8:_11639EB9D9BD41B0CB0F41C5031D8031"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7D338B82F6CA54E04FD3196B759846B1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D01331147F5A48B5E4999764E34BEBCA"
+        "OwnerKey" = "8:_8F43EB217B5B3F7C85740F50B3744F56"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -91,6 +91,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -107,6 +115,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -136,34 +152,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_307002243116415BB2529EA2E6FDCC40"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\pdf_protect.ico"
-            "TargetName" = "8:pdf_protect.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_BE0854A7D131476A9A8A1AB5F411A25E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7D338B82F6CA54E04FD3196B759846B1"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_11639EB9D9BD41B0CB0F41C5031D8031"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7D338B82F6CA54E04FD3196B759846B1"
+                    "_11639EB9D9BD41B0CB0F41C5031D8031"
                     {
                     "Name" = "8:PdfSharp.Charting.dll"
                     "Attributes" = "3:512"
@@ -187,14 +183,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D01331147F5A48B5E4999764E34BEBCA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8F43EB217B5B3F7C85740F50B3744F56"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D01331147F5A48B5E4999764E34BEBCA"
+                    "_8F43EB217B5B3F7C85740F50B3744F56"
                     {
                     "Name" = "8:PdfSharp.dll"
                     "Attributes" = "3:512"
@@ -216,6 +212,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D400EB1C85544E7E862ECF206E8C83C6"
+            {
+            "SourcePath" = "8:C:\\Users\\Kobus\\Downloads\\pdf_protect.ico"
+            "TargetName" = "8:pdf_protect.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_BE0854A7D131476A9A8A1AB5F411A25E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D6E0D0DEA7BA0E817ADAB68261589C96"
@@ -334,7 +350,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_307002243116415BB2529EA2E6FDCC40"
+        "ARPPRODUCTICON" = "8:_D400EB1C85544E7E862ECF206E8C83C6"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -448,7 +464,7 @@
             "Target" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
             "Folder" = "8:_19C78F0546B34091BA54D2155A66221B"
             "WorkingFolder" = "8:_BE0854A7D131476A9A8A1AB5F411A25E"
-            "Icon" = "8:_307002243116415BB2529EA2E6FDCC40"
+            "Icon" = "8:_D400EB1C85544E7E862ECF206E8C83C6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_34B2E0B2A40F424B83830229E5CE4924"
@@ -462,7 +478,7 @@
             "Target" = "8:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
             "Folder" = "8:_B0BB9CA24FC748C1A48817709FDD3C4C"
             "WorkingFolder" = "8:_BE0854A7D131476A9A8A1AB5F411A25E"
-            "Icon" = "8:_307002243116415BB2529EA2E6FDCC40"
+            "Icon" = "8:_D400EB1C85544E7E862ECF206E8C83C6"
             "Feature" = "8:"
             }
         }
@@ -866,7 +882,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3284C0DBB8AC4B26BC6ECA8EF92BE247"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\PDF Protect App\\obj\\Release\\PDF Protect App.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BE0854A7D131476A9A8A1AB5F411A25E"
